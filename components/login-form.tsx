@@ -15,7 +15,7 @@ export default function LoginForm() {
           rel="noopener noreferrer"
         >
           <span className={styles.path44}>
-            <Image src="/assets/devchallenges.png" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/devchallenges.png" alt="devchallenges Logo" width="36.87px" height="18px" />
           </span>
         </a>
         <h3 className={styles.text1 + ' p-3'}>Join thousands of learners from around the world </h3>
