@@ -56,7 +56,7 @@ export default function LoginForm() {
           rel="noopener noreferrer"
         >
           <span className={styles.ellipse2}>
-            <Image src="/Github.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/Gihub.svg" alt="GITHUB Logo" width={72} height={16} />
           </span>
         </a>
       </div>
