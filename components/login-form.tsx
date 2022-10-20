@@ -43,7 +43,7 @@ export default function LoginForm() {
               <Field className={styles.email} id="email" name="email" placeholder="Email" aria-describedby="emailHelp" />
               <Field className={styles.password} id="password" name="password" placeholder="Password" type="password" />
             </div>
-            <button type="submit" className={styles["login-button"]}>Login</button>
+            <button type="submit" className={styles["login-button"]}>Start coding now</button>
           </Form>
         </Formik>
         <p className={styles["small-gray-text"]}>or continue with these social profiles </p>
@@ -73,7 +73,7 @@ export default function LoginForm() {
             <img src="/Gihub.svg" alt="GITHUB Logo" />
           </a>
         </div>
-        <p className={styles["small-gray-text"]}>Already a member?
+        <p className={styles["small-gray-text"]}>Already a member?{' '}
           <a href="#"
             rel="noopener noreferrer">
             <span className={styles["small-blue-text"]}>Login</span>
@@ -83,3 +83,4 @@ export default function LoginForm() {
     </div>
   );
 };
+//space in jsx?
