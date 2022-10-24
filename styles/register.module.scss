@@ -1,0 +1,130 @@
+@import './globals.scss';
+@import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+@import url( 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-header{
+    display: flex;
+    height: 30px;
+    width: fit-content;
+    top: 0;
+    left: 0;
+}
+
+.header-logo{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.register-link{
+}
+
+@mixin small-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $text-dark-gray;
+    text-align: center;
+}
+
+.small-blue-text{
+    @include small-text();
+    color: $text-blue;
+}
+
+.register-body{
+    display: flex;
+    flex-direction: column;
+    // height: auto;
+    width: 43rem;
+    border: 1px solid $text-gray;
+    border-radius: 24px;
+    padding: 2rem;
+}
+
+.register-body h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-block-end: 0;
+    margin-block-start: 1.2rem;
+}
+
+.register-body p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.avatar { 
+    position: relative; 
+    display: inline-block;
+}
+
+.avatar img{
+    display: block;
+    // vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar:before {
+    content: "\25AE";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+    left:-5px;
+    position:absolute;
+    top:0;
+}
+
+// .avatar .fa-download{ 
+//     position: absolute; 
+//     bottom:10px; 
+//     left:10px; 
+// }
+
+.fields-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin login-fields-mixin {
+    height: 3.2rem;
+    margin-top: 1rem;
+    border: 1px solid $text-gray;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.9rem 0 0.9rem 2.8rem;
+}
+
+.input{
+    @include login-fields-mixin();
+    background-position: 0.5rem;
+}
+.bio{
+    @include login-fields-mixin();
+    background-position: 0.5rem;
+    height:150px;
+}
+
+
+@mixin blue-button-mixin {
+    background-color: $background-blue;
+    color: $background-light;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    margin: 1.5rem 0;
+    border: 0;
+}
+.login-button{
+    @include blue-button-mixin();
+    width: 15%;
+}
