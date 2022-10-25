@@ -11,6 +11,7 @@ interface Values {
 export default function RegisterForm() {
   return (
     <div className={styles["register-container"]}>
+      {/* header */}
       <div className={styles["register-header"]}>
         <div className={styles["register-header-logo"]}>
           <a href="#" rel="noopener noreferrer">
@@ -18,14 +19,15 @@ export default function RegisterForm() {
           </a>
         </div>
         <div className={styles["register-header-profile"]}>
-          <div><img src="/avatar.png" alt="Avatar"></img></div>
+          <div><img src="/avatar-profile.png" alt="Avatar"></img></div>
           <div><span>Xanthe neal</span></div>
           <div><img src="/arrow.png" alt="arrow" className={styles["arrow"]}></img></div>
         </div>
       </div>
       
+      {/* body */}
       <div className={styles["register-body"]}>
-        <div className={styles["register-link"]}>
+        <div className={styles["register-upper-link"]}>
           <a href="#"
             rel="noopener noreferrer">
             <span className={styles["small-blue-text"]}>&lt; Back</span>
@@ -35,7 +37,7 @@ export default function RegisterForm() {
           <h3>Change Info </h3>
           <p>Changes will be reflected to every services </p>
           <div className={styles["avatar"]}>
-            <div><img src="/avatar.png" alt="Avatar"></img></div>
+            <div><img src="/avatar-profile.png" alt="Avatar"></img></div>
             {/* <a href="#" download="new-filename"><i className="fas fa-download"></i></a> */}
             <div><span>CHANGE PHOTO</span></div>
           </div>
@@ -78,6 +80,14 @@ export default function RegisterForm() {
             </Form>
           </Formik>
         </div>
+        <div className={styles["register-lower-link"]}>
+          <div><span>Created by rahimbtc</span></div>
+          <div><span>devChallenges.io</span></div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <div className={styles["register-footer"]}>
       </div>
     </div>
   );

@@ -14,14 +14,14 @@
     display: flex;
     width: fit-content;
     align-items: center;
-    height: 5rem;
+    height: 7rem;
 }
 
 .register-header-logo{
     position: fixed;
     display: flex;
-    top: 20px;
-    left: 20px;
+    top: 2.5rem;
+    left: 5rem;
 }
 
 .register-header-profile{
@@ -30,13 +30,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // width: 70px;
-    // height: 16px;
-    top: 20px;
-    right: 20px;
+    top: 1.8rem;
+    right: 5rem;
+
 }
 
 .register-header-profile span{
+
+    width: 70px;
+    height: 16px;
+
+    padding: 1rem;
     /* Xanthe Neal */
     font-family: 'Noto Sans';
     font-style: normal;
@@ -50,9 +54,11 @@
 }
 
 .register-header-profile img{
-    width: 28px;
-    height: 34px;
-    background: url('../public/avatar.png');
+    border-radius: 6px;
+    width: 32px;
+    height: 36.69px;
+    background: url('../public/avatar-profile.png');
+    // padding-right: 0.5rem;
 }
 
 .register-header-profile .arrow{
@@ -68,10 +74,10 @@
     width: 60rem;
     border: 1px solid $text-gray;
     border-radius: 7px;
-    padding: 2rem;
+    padding: 2rem 3rem;
 }
 
-.register-link{
+.register-upper-link{
     margin-bottom: 1.3rem;
 }
 
@@ -108,17 +114,16 @@
 
 .avatar img{
     display: flex;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .avatar span{
-    // position: absolute;
-    // left: 30.88%;
-    // right: 62.38%;
-    // top: 26.72%;
-    // bottom: 71.62%;
+
+    padding: 1.5rem;
 
     font-family: 'Noto Sans';
     font-style: normal;
@@ -130,34 +135,19 @@
     color: #828282;
 }
 
-// .avatar:before {
-//     content: "\25AE";  /* this is your text. You can also use UTF-8 character codes as I do here */
-//     font-family: FontAwesome;
-//     left:-5px;
-//     position:absolute;
-//     top:0;
-// }
-
-// .avatar .fa-download{ 
-//     position: absolute; 
-//     bottom:10px; 
-//     left:10px; 
-// }
-
 .fields-container{
     display: flex;
     flex-direction: column;
 }
 
 @mixin login-fields-mixin {
-    height: 3.2rem;
-    // margin-top: 1rem;
-    border: 1px solid $text-gray;
-    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #828282;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 400;
     padding: 0.9rem 0 0.9rem 2.8rem;
-    width: 50%;
+    width: 60%;
 }
 
 .input{
@@ -181,7 +171,33 @@
     margin: 1.5rem 0;
     border: 0;
 }
+
 .login-button{
     @include blue-button-mixin();
     width: 15%;
+}
+
+.register-lower-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-lower-link span{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.035em;
+
+    color: #828282;
+}
+
+.register-footer{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    height: 5rem;
 }
