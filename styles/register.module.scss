@@ -1,30 +1,78 @@
 @import './globals.scss';
-@import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
-@import url( 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+// @import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+// @import url( 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 .register-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
 }
 
 .register-header{
     display: flex;
-    height: 30px;
     width: fit-content;
-    top: 0;
-    left: 0;
+    align-items: center;
+    height: 5rem;
 }
 
-.header-logo{
+.register-header-logo{
     position: fixed;
+    display: flex;
     top: 20px;
     left: 20px;
 }
 
+.register-header-profile{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    // width: 70px;
+    // height: 16px;
+    top: 20px;
+    right: 20px;
+}
+
+.register-header-profile span{
+    /* Xanthe Neal */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.035em;
+
+    /* Gray 1 */
+    color: #333333;
+}
+
+.register-header-profile img{
+    width: 28px;
+    height: 34px;
+    background: url('../public/avatar.png');
+}
+
+.register-header-profile .arrow{
+    width: 9px;
+    height: 9px;
+    background: url('../public/avatar.png');
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    // height: auto;
+    width: 60rem;
+    border: 1px solid $text-gray;
+    border-radius: 7px;
+    padding: 2rem;
+}
+
 .register-link{
+    margin-bottom: 1.3rem;
 }
 
 @mixin small-text {
@@ -37,50 +85,58 @@
 .small-blue-text{
     @include small-text();
     color: $text-blue;
+    
 }
 
-.register-body{
-    display: flex;
-    flex-direction: column;
-    // height: auto;
-    width: 43rem;
-    border: 1px solid $text-gray;
-    border-radius: 24px;
-    padding: 2rem;
-}
-
-.register-body h3{
+.register-form h3{
     font-size: 1.2rem;
     font-weight: 600;
     margin-block-end: 0;
     margin-block-start: 1.2rem;
 }
 
-.register-body p{
+.register-form p{
     font-size: 1rem;
     font-weight: 400;
 }
 
 .avatar { 
-    position: relative; 
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .avatar img{
-    display: block;
-    // vertical-align: middle;
+    display: flex;
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.avatar:before {
-    content: "\25AE";  /* this is your text. You can also use UTF-8 character codes as I do here */
-    font-family: FontAwesome;
-    left:-5px;
-    position:absolute;
-    top:0;
+.avatar span{
+    // position: absolute;
+    // left: 30.88%;
+    // right: 62.38%;
+    // top: 26.72%;
+    // bottom: 71.62%;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: -0.035em;
+    color: #828282;
 }
+
+// .avatar:before {
+//     content: "\25AE";  /* this is your text. You can also use UTF-8 character codes as I do here */
+//     font-family: FontAwesome;
+//     left:-5px;
+//     position:absolute;
+//     top:0;
+// }
 
 // .avatar .fa-download{ 
 //     position: absolute; 
@@ -95,12 +151,13 @@
 
 @mixin login-fields-mixin {
     height: 3.2rem;
-    margin-top: 1rem;
+    // margin-top: 1rem;
     border: 1px solid $text-gray;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 400;
     padding: 0.9rem 0 0.9rem 2.8rem;
+    width: 50%;
 }
 
 .input{
@@ -110,7 +167,7 @@
 .bio{
     @include login-fields-mixin();
     background-position: 0.5rem;
-    height:150px;
+    height:100px;
 }
 
 
