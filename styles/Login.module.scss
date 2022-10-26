@@ -12,7 +12,7 @@
     flex-direction: column;
     width: 31.5rem;
     border: 1px solid $text-gray;
-    border-radius: 24px;
+    border-radius: 2.6rem;
     padding: 3.8rem;
 }
 .login h3{
@@ -36,7 +36,7 @@
     height: 3.2rem;
     margin-top: 1rem;
     border: 1px solid $text-gray;
-    border-radius: 8px;
+    border-radius: .53rem;
     font-size: 1rem;
     font-weight: 400;
     padding: 0.9rem 0 0.9rem 2.8rem;
@@ -53,16 +53,7 @@
     background-position: 0.5rem;
 }
 
-@mixin blue-button-mixin {
-    background-color: $background-blue;
-    color: $background-light;
-    height: 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: .5rem;
-    margin: 1.5rem 0;
-    border: 0;
-}
+
 
 .login-button{
     @include blue-button-mixin();
@@ -74,12 +65,7 @@
     cursor: pointer;
 }
 
-@mixin small-text {
-    font-size: 1rem;
-    font-weight: 400;
-    color: $text-dark-gray;
-    text-align: center;
-}
+
 .small-gray-text {
     @include small-text();
     color: $text-dark-gray;
@@ -93,14 +79,6 @@
     gap: 1rem;
 }
 
-.small-blue-text{
-    @include small-text();
-    color: $text-blue;
-}
-
-.small-blue-text:hover{
-    text-decoration: underline;
-}
 
 // put image inside input css?
 

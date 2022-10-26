@@ -8,3 +8,35 @@ $text-dark: #333333;
 $text-dark-gray: #828282;
 $box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 
+@mixin blue-button-mixin {
+    background-color: $background-blue;
+    color: $background-light;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    margin: 1.5rem 0;
+    border: 0;
+}
+
+@mixin blue-button-mixin-hover {
+    background-color: $text-blue;
+    cursor: pointer;
+}
+
+
+@mixin small-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $text-dark-gray;
+    text-align: center;
+}
+
+.small-blue-text{
+    @include small-text();
+    color: $text-blue;
+}
+
+.small-blue-text:hover{
+    text-decoration: underline;
+}

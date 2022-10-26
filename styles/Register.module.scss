@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.register-header-logo {}
+// .register-header-logo {}
 
 .register-header-profile {
     display: flex;
@@ -65,19 +65,6 @@
     margin-bottom: 1.3rem;
 }
 
-@mixin small-text {
-    font-size: 1rem;
-    font-weight: 400;
-    color: $text-dark-gray;
-    text-align: center;
-}
-
-.small-blue-text {
-    @include small-text();
-    color: $text-blue;
-
-}
-
 .register-form h3 {
     font-size: 1.6rem;
     font-weight: 400;
@@ -119,7 +106,7 @@
     line-height: 1.2rem;
     /* identical to box height */
     letter-spacing: -0.035em;
-    color: #828282;
+    color: $text-dark-gray;
 }
 
 .fields-container {
@@ -129,7 +116,7 @@
 
 @mixin login-fields-mixin {
     box-sizing: border-box;
-    border: 1px solid #828282;
+    border: 1px solid $text-dark-gray;
     border-radius: 0.8rem;
     font-size: 1rem;
     font-weight: 400;
@@ -151,26 +138,13 @@
     height: 9.6rem;
 }
 
-
-@mixin blue-button-mixin {
-    background-color: $background-blue;
-    color: $background-light;
-    height: 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: .5rem;
-    margin: 1.5rem 0;
-    border: 0;
-}
-
 .login-button {
     @include blue-button-mixin();
     width: 15%;
 }
 
 .login-button:hover {
-    background-color: $text-blue;
-    cursor: pointer;
+    @include blue-button-mixin-hover();
 }
 
 .register-lower-link {
@@ -188,7 +162,7 @@
     line-height: 1.25rem;
     letter-spacing: -0.035em;
 
-    color: #828282;
+    color: $text-dark-gray;
 }
 
 .register-footer {
