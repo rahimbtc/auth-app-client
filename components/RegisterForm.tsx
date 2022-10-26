@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Formik, Field, Form, FormikHelpers } from 'formik';
 import Image from 'next/image'
+import { useState } from 'react';
 import styles from '../styles/Register.module.scss';
+import CollapsableMenu, { MenuItem } from './CollapsableMenu';
 
 interface Values {
   username: string;
@@ -9,6 +11,9 @@ interface Values {
 }
 
 export default function RegisterForm() {
+  const [collapsable, setCallapsable] = useState(false);
+
+
   return (
     <div className={styles["register-container"]}>
       {/* header */}
@@ -21,10 +26,17 @@ export default function RegisterForm() {
         <div className={styles["register-header-profile"]}>
           <div><img src="/avatar-profile.png" alt="Avatar"></img></div>
           <div><span>Xanthe neal</span></div>
-          <div><img src="/arrow.png" alt="arrow" className={styles["arrow"]}></img></div>
+          <div onClick={()=> setCallapsable(!collapsable)}><img src="/arrow.png" alt="arrow" className={styles["arrow"]} />
+
+          </div>
+          <CollapsableMenu show={collapsable}>
+            <MenuItem link='#' label='My Profile' imgUrl='/profile.svg'></MenuItem>
+            <MenuItem link='#' label='Group Chat' imgUrl='/group.svg'></MenuItem>
+            <MenuItem link='#' label='Logout' imgUrl='/logout.svg' className={styles['danger']}></MenuItem>
+          </CollapsableMenu>
         </div>
       </div>
-      
+
       {/* body */}
       <div className={styles["register-body"]}>
         <div className={styles["register-upper-link"]}>
@@ -89,6 +101,7 @@ export default function RegisterForm() {
       {/* footer */}
       <div className={styles["register-footer"]}>
       </div>
+
     </div>
   );
 };
