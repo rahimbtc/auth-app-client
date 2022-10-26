@@ -1,83 +1,67 @@
 @import './globals.scss';
-// @import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
-// @import url( 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 .register-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
     align-items: center;
-    // height: 100vh;
 }
 
-.register-header{
+.register-header {
     display: flex;
-    width: fit-content;
+    width: 100%;
+    height: 5rem;
+    padding: 0 4rem;
+    justify-content: space-between;
     align-items: center;
-    height: 7rem;
 }
 
-.register-header-logo{
-    position: fixed;
-    display: flex;
-    top: 2.5rem;
-    left: 5rem;
-}
+.register-header-logo {}
 
-.register-header-profile{
-    position: fixed;
+.register-header-profile {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    top: 1.8rem;
-    right: 5rem;
-
+    width: 9.2rem;
 }
 
-.register-header-profile span{
-
-    width: 70px;
-    height: 16px;
-
-    padding: 1rem;
-    /* Xanthe Neal */
-    font-family: 'Noto Sans';
-    font-style: normal;
+.register-header-profile span {
+    display: block;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: .8rem;
+    line-height: 1rem;
     letter-spacing: -0.035em;
-
-    /* Gray 1 */
-    color: #333333;
+    color: $text-dark;
 }
 
-.register-header-profile img{
-    border-radius: 6px;
-    width: 32px;
-    height: 36.69px;
+.register-header-profile img {
+    border-radius: 0.4rem;
     background: url('../public/avatar-profile.png');
-    // padding-right: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2rem;
 }
 
-.register-header-profile .arrow{
-    width: 9px;
-    height: 9px;
+.register-header-profile .arrow {
     background: url('../public/avatar.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 1rem;
 }
 
-.register-form{
+.register-form {
     display: flex;
     flex-direction: column;
     // height: auto;
     width: 60rem;
     border: 1px solid $text-gray;
-    border-radius: 7px;
+    border-radius: .6rem;
     padding: 2rem 3rem;
 }
 
-.register-upper-link{
+.register-upper-link {
     margin-bottom: 1.3rem;
 }
 
@@ -88,54 +72,57 @@
     text-align: center;
 }
 
-.small-blue-text{
+.small-blue-text {
     @include small-text();
     color: $text-blue;
-    
+
 }
 
-.register-form h3{
-    font-size: 1.2rem;
-    font-weight: 600;
+.register-form h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
     margin-block-end: 0;
     margin-block-start: 1.2rem;
 }
 
-.register-form p{
-    font-size: 1rem;
-    font-weight: 400;
+.register-form p {
+    margin: .5rem 0;
+    @include small-text();
+    color: $text-dark-gray;
+    text-align: start;
 }
 
-.avatar { 
+.avatar {
+    margin: 0.5rem 0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.avatar img{
+.avatar img {
     display: flex;
-    width: 72px;
-    height: 72px;
+    width: 4.65rem;
+    height: 4.65rem;
 
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 0.6rem;
 }
 
-.avatar span{
+.avatar span {
 
     padding: 1.5rem;
 
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     /* identical to box height */
     letter-spacing: -0.035em;
     color: #828282;
 }
 
-.fields-container{
+.fields-container {
     display: flex;
     flex-direction: column;
 }
@@ -143,21 +130,25 @@
 @mixin login-fields-mixin {
     box-sizing: border-box;
     border: 1px solid #828282;
-    border-radius: 12px;
+    border-radius: 0.8rem;
     font-size: 1rem;
     font-weight: 400;
-    padding: 0.9rem 0 0.9rem 2.8rem;
+    padding-left: 1.2rem;
     width: 60%;
+    height: 3.45rem;
+    margin-top: .3rem
 }
 
-.input{
+.input {
     @include login-fields-mixin();
     background-position: 0.5rem;
 }
-.bio{
+
+.bio {
     @include login-fields-mixin();
+    padding-top: 1rem;
     background-position: 0.5rem;
-    height:100px;
+    height: 9.6rem;
 }
 
 
@@ -172,30 +163,35 @@
     border: 0;
 }
 
-.login-button{
+.login-button {
     @include blue-button-mixin();
     width: 15%;
 }
 
-.register-lower-link{
+.login-button:hover {
+    background-color: $text-blue;
+    cursor: pointer;
+}
+
+.register-lower-link {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.register-lower-link span{
+.register-lower-link span {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     letter-spacing: -0.035em;
 
     color: #828282;
 }
 
-.register-footer{
+.register-footer {
     display: flex;
     width: fit-content;
     align-items: center;

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Formik, Field, Form, FormikHelpers } from 'formik';
 import Image from 'next/image'
-import styles from '../styles/register.module.scss';
+import styles from '../styles/Register.module.scss';
 
 interface Values {
   username: string;
